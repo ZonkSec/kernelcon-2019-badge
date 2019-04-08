@@ -1,5 +1,13 @@
 # kernelcon-2019-badge
-the badge was controlled by an atmel tiny85 (attiny85). the badge had three slots for cr2032 batteries. the five LEDs are addressable RGBs (apa102).
+the badge was controlled by an atmel tiny85 (attiny85). the badge had three slots for cr2032 batteries. the five LEDs are addressable RGBs (apa102). a button can be used to change modes, which are the following:
+* fadder mode, each LED faded independently 
+* freeze of of whatever the previous state was
+* fadder mode, all LEDs in unison
+* freeze of of whatever the previous state was
+* binary blink out
+* rave mode (flashing colors)
+* looping animation with a color change after each lap
+
 ![picture](images/front.PNG)
 ![picture](images/back.PNG)
 
