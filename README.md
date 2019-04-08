@@ -1,3 +1,23 @@
 # kernelcon-2019-badge
+the badge was controlled by an atmel tiny85 (attiny85). the badge had three slots for cr2032 batteries. the five LEDs are addressable RGBs (apa102).
 ![picture](images/front.PNG)
 ![picture](images/back.PNG)
+
+## ctf challenges
+### challenge 1 | How can we sit in the *light* of discovery and not act?
+> hint: sometimes blinks have meaning
+
+find mode on badge that outputs binary. convert binary to ascii, which gives you a URL (which will take you to the docker app). the landing page will earn you a flag.
+
+### challenge 2 | It's an Interactive ~~CD-ROM~~ website!
+> hint: there's no place like home.
+
+discover the SSRF vuln. the data fetcher application can be used to access the private and sensative "DINO DNA SERVICE" listening on localhost:1337. its landing page will earn you a flag.
+
+### challenge 3 | BINGO! DINO DNA!
+> hint: looking for more DNA? a secret mode you seek.
+
+interact with the "DINO DNA SERVICE" and pass it dinoID as GET params to earn the dino's DNA and a flag. one dinoID is provided on the landing page of the api. another is found on silkscreen of badge (rot13->base64->binary). another is found in a secret mode on the badge (hitting the mode button a 100 times or more) that outputs binary same as challenge 1, each type of badge (hacker,crew&organizer,speaker) will have its own dinoID. 
+
+### challenge 4 | Timmy, let go! I'll *catch* you!
+the SSRF data fetecher has a 'X_DINO_AUTH_FLAG' header when it makes request. if you make it make a request to a server you control, it will expose the flag.
