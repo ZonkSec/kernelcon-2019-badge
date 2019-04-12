@@ -12,10 +12,15 @@ the badge was controlled by an atmel tiny85 (attiny85). the badge had three slot
 ![picture](images/back.PNG)
 
 ## ctf challenges
+all the badge challenges are solved via a single multi-container docker application found in "docker" directory. 
+
+to run it:
+1.  run "docker-compose up" inside the "docker" directory.
+
 ### challenge 1 | How can we sit in the *light* of discovery and not act?
 > hint: sometimes blinks have meaning
 
-find mode on badge that outputs binary. convert binary to ascii, which gives you a URL (which will take you to the docker app). the landing page will earn you a flag.
+find mode on badge that outputs binary. convert binary to ascii, which gives you a URL ("nedry.tech", which will take you to the docker app). the landing page will earn you a flag.
 
 ### challenge 2 | It's an Interactive ~~CD-ROM~~ website!
 > hint: there's no place like home.
