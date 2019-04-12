@@ -1,0 +1,12 @@
+version: '3'
+services:
+ external:
+   image: external
+   build: ./external
+   container_name: external
+   ports:
+    - "80:80"
+ dinoapi:
+   image: dinoapi
+   build: ./dinoapi
+   container_name: dinoapi
